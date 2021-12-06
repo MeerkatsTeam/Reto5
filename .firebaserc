@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "reto4-mintic-7bb38"
+  },
+  "targets": {
+    "reto4-mintic-7bb38": {
+      "hosting": {
+        "reto4": [
+          "reto4meerkats"
+        ]
+      }
+    }
+  }
+}

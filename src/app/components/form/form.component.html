@@ -8,7 +8,7 @@
         <div *ngIf="f['FirstName'].errors['minlength']">
           El nombre debe tener al menos 3 carácteres
         </div>
-        <div *ngIf="f['FirstName'].errors['minlength']">
+        <div *ngIf="f['FirstName'].errors['maxlength']">
           El nombre supera la cantidad permitida de caracteres
         </div>
       </div>
@@ -19,6 +19,12 @@
         placeholder="Apellido paterno" [ngClass]="{ 'is-invalid': submitted && f['LastName'].errors }" />
       <div *ngIf="submitted && f['LastName'].errors" class="invalid-feedback">
         <div *ngIf="f['LastName'].errors['required']">Campo requerido</div>
+        <div *ngIf="f['LastName'].errors['minlength']">
+          El nombre debe tener al menos 3 carácteres
+        </div>
+        <div *ngIf="f['LastName'].errors['maxlength']">
+          El nombre supera la cantidad permitida de caracteres
+        </div>
       </div>
     </div>
 

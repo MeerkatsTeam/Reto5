@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "reto4:build:production",
+            "firebaseProject": "reto4-mintic-7bb38",
+            "firebaseHostingSite": "reto4meerkats"
+          }
         }
       }
     }
