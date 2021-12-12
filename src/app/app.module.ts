@@ -8,7 +8,6 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { FormComponent } from './moduls/master/form/form.component';
 import { HomeComponent } from './moduls/master/home/home.component';
 import { NotFoundComponent } from './moduls/master/not-found/not-found.component';
 import { NvMenuComponent } from './moduls/master/nv-menu/nv-menu.component';
@@ -17,7 +16,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
     HomeComponent,
     NotFoundComponent,
     NvMenuComponent,

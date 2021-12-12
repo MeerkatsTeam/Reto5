@@ -8,6 +8,7 @@ import { CreateProductComponent } from './products/create-product/create-product
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { ListProductComponent } from './products/list-product/list-product.component';
 import { ListPersonComponent } from './persons/list-person/list-person.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { ListPersonComponent } from './persons/list-person/list-person.component
   ],
   imports: [
     CommonModule,
-    AdministrationRoutingModule
+    AdministrationRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministrationModule { }

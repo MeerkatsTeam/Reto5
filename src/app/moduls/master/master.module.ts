@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NvMenuComponent } from './nv-menu/nv-menu.component';
 import { FooterComponent } from './footer/footer.component';
-//import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -16,7 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     NvMenuComponent,
     FooterComponent,
-    //FormComponent
   ],
   imports: [
     CommonModule,

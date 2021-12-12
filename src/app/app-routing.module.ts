@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './moduls/master/home/home.component';
 import { NotFoundComponent } from './moduls/master/not-found/not-found.component';
-import { FormComponent } from './moduls/master/form/form.component';
 const routes: Routes = [
 {
   path: "home",
@@ -29,10 +28,6 @@ const routes: Routes = [
 {
   path: "parameters",
   loadChildren:()=>import("./moduls/parameters/parameters.module").then(x=>x.ParametersModule)
-},
-{
-  path: "registration",
-  component: FormComponent
 },
 {
   path: "**",
