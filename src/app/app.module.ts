@@ -3,25 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NvMenuComponent } from './components/nv-menu/nv-menu.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HomeComponent } from './public/general/home/home.component';
-import { NotFoundComponent } from './public/general/not-found/not-found.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-
+import { FormComponent } from './moduls/master/form/form.component';
+import { HomeComponent } from './moduls/master/home/home.component';
+import { NotFoundComponent } from './moduls/master/not-found/not-found.component';
+import { NvMenuComponent } from './moduls/master/nv-menu/nv-menu.component';
+import { FooterComponent } from './moduls/master/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NvMenuComponent,
-    FooterComponent,
     FormComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NvMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
