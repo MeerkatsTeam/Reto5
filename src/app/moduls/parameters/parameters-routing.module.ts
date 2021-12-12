@@ -9,19 +9,19 @@ const routes: Routes = [
   {
     path: "category-list",
     component: CategoryComponent
-    },
-    {
+  },
+  {
     path: "category-create",
     component: CreateCategoryComponent
-    },
-    {
-    path: "category-edit",
+  },
+  {
+    path: "category-edit/:id",
     component: EditCategoryComponent
-    },
-    {
-      path: "category-remove",
-      component: RemoveCategoryComponent
-      }
+  },
+  {
+    path: "category-remove/:id",
+    component: RemoveCategoryComponent
+  }
 ];
 
 @NgModule({
