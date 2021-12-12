@@ -6,6 +6,8 @@ import { CreatePersonComponent } from './persons/create-person/create-person.com
 import { EditPersonComponent } from './persons/edit-person/edit-person.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
+import { ListProductComponent } from './products/list-product/list-product.component';
+import { ListPersonComponent } from './persons/list-person/list-person.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
     CreatePersonComponent,
     EditPersonComponent,
     CreateProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    ListProductComponent,
+    ListPersonComponent
   ],
   imports: [
     CommonModule,

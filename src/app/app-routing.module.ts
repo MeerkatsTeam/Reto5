@@ -19,6 +19,18 @@ const routes: Routes = [
   loadChildren:()=>import("./moduls/security/security.module").then(x=>x.SecurityModule)
 },
 {
+  path: "administration",
+  loadChildren:()=>import("./moduls/administration/administration.module").then(x=>x.AdministrationModule)
+},
+{
+  path: "orders",
+  loadChildren:()=>import("./moduls/orders/orders.module").then(x=>x.OrdersModule)
+},
+{
+  path: "parameters",
+  loadChildren:()=>import("./moduls/parameters/parameters.module").then(x=>x.ParametersModule)
+},
+{
   path: "registration",
   component: FormComponent
 },

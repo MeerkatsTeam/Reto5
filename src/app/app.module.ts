@@ -13,6 +13,7 @@ import { HomeComponent } from './moduls/master/home/home.component';
 import { NotFoundComponent } from './moduls/master/not-found/not-found.component';
 import { NvMenuComponent } from './moduls/master/nv-menu/nv-menu.component';
 import { FooterComponent } from './moduls/master/footer/footer.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { FooterComponent } from './moduls/master/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase())

@@ -24,7 +24,7 @@
     <div class="card">
         <article class="card-body">
           <div class="login-form">
-            <form [formGroup]="formlogin" (ngSubmit)="onSubmit()">
+            <form [formGroup]="formlogin">
               <div class="form-group mb-3">
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -35,12 +35,12 @@
                     formControlName="email"
                     class="form-control"
                     placeholder="Correo electrónico"
-                    [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                    [ngClass]="{ 'is-invalid': GetForm['email'].errors }"
                   />
                 </div>
-                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
-                  <div *ngIf="f['email'].errors['required']">Valor requerido</div>
-                  <div *ngIf="f['email'].errors['email']">Correo inválido</div>
+                <div *ngIf="GetForm['email'].errors" class="invalid-GetFormeedback">
+                  <div *ngIf="GetForm['email'].errors['required']">Valor reqGetFormerido</div>
+                  <div *ngIf="GetForm['email'].errors['email']">Correo inválido</div>
                 </div>
               </div>
               <div class="form-group mb-3">
@@ -53,21 +53,30 @@
                     formControlName="password"
                     class="form-control"
                     placeholder="***********"
-                    [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                    [ngClass]="{ 'is-invalid':GetForm['password'].errors }"
                   />
                 </div>
                 <div
-                  *ngIf="submitted && f['password'].errors"
+                  *ngIf="GetForm['password'].errors"
                   class="invalid-feedback"
                 >
-                  <div *ngIf="f['password'].errors['required']">Valor requerido</div>
+                  <div *ngIf="GetForm['password'].errors['required']">Valor requerido</div>
                 </div>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <button [disabled]="GetForm['email'].errors || GetForm['password'].errors"
+                type="button"
+                class="btn btn-primary"
+                (click)="Login()">Login</button>
               </div>
               <!-- form-group// -->
-              <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+              <div class="col">
+                <label style="float: right">
+                  <a routerLink="/security/recovery-password"
+                    ><b>Forgot password?</b></a
+                  ></label
+                >
+              </div>
             </form>
           </div>
         </article>
